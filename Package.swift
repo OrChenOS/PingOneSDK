@@ -18,11 +18,8 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "PingOnePackage",
-            dependencies: []),
-        .testTarget(
-            name: "PingOnePackageTests",
-            dependencies: ["PingOnePackage"]),
-    ]
+        
+        .binaryTarget(name: "PingOnePackage", url: "https://github.com/pingidentity/pingone-mobile-sdk-ios/archive/refs/tags/v1.5.0.zip", checksum: "52f8308dd8a86f3b110754a5deb0b1d9b72f826afb881631dcdbfaac4d68d199")
+        ]
+
 )
